@@ -1,0 +1,6 @@
+Material,Density,TensileStrength,CostPerKg
+Aluminum,2700,300,1.5
+Steel,7850,500,0.8
+Titanium,4500,900,12
+CarbonFiber,1600,3500,20
+Plastic,950,50,0.5
