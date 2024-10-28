@@ -1,6 +1,7 @@
 function [time, sensorReading, leftMotorSpeed, rightMotorSpeed, position] = simulateLineFollowerPololu(kP, kI, kD, setpoint, randomSeed)
     % Time Vector
-    time = 0:0.01:10;
+    dt = 0.1;
+    time = 0:dt:10;
 
     % Set the random seed
     if nargin > 4 && ~isempty(randomSeed)
@@ -44,8 +45,8 @@ function [time, sensorReading, leftMotorSpeed, rightMotorSpeed, position] = simu
 
         % Calculate adjustment
         error = setpoint - sensorReading(i);
-        integral = integral + error;
-        derivative = (error - lastError);
+        integral = integral + error*dt;
+        derivative = (error - lastError)/dt;
         adjustment = kP * error + kI * integral + kD * derivative;
 
         % Adjust motor speeds
