@@ -1,5 +1,29 @@
 # Week 11 Assignments: Multitasking in a Single-Threaded Environment
 
+## General Submission Guidelines:
+
+1. Code Quality:
+   * Your `.mlapp` files should be well-organized, with clear and meaningful variable names.
+   * Include comments to explain key sections of your code.
+   * Follow good programming practices for readability and maintainability.
+2. Testing:
+   * Ensure your applications run without errors.
+   * Test all functionalities thoroughly before submission.
+   * Verify that the user interface remains responsive during operation.
+3. For all solutions, use the provided `Template.mlapp` file. In the code section you will see two custom functions `setup()` and `loop()`. This week's homework is designed around single threaded programming. This is a general structure for single-threaded programming such as with microcontrollers.
+   * The `setup()` function will run once, you can use this to set up variables, etc
+   * The `loop()` function will run endlessly once `setup()` has run once.
+   * All programming shall use these two functions (along with any other custom functions you develop)
+   * No callbacks will be used with the exception of one, which is allowed for the PID simulator as that will be necessary in order to get instant feedback from the line position slider.
+   * See image below for clarification, new code is allowed in the green are with the two pre-defined functions and any of your own you wish to create. You may also use the properties as you see fit. No code is allowed in the red area where callbacks are created _except_ for the PID simulator.
+
+![do code and do not code](../../images/week11/To code and Not to code.png)
+
+### Examples
+
+As always, the examples are merely used to illustrate what is expected. You have creative freedom to design your
+applications as you see fit, as long as they meet the requirements.
+
 ## Assignment 1: Blinking an LED with pause
 
 ### Objective:
@@ -149,24 +173,3 @@ application should allow the user to adjust parameters and visualize how the rob
 ### Example
 
 ![pid simulator](../../images/week11/pidSimulator.png)
-
----
-
-## General Submission Guidelines:
-
-1. Code Quality:
-    * Your `.mlapp` files should be well-organized, with clear and meaningful variable names.
-    * Include comments to explain key sections of your code.
-    * Follow good programming practices for readability and maintainability.
-2. Testing:
-    * Ensure your applications run without errors.
-    * Test all functionalities thoroughly before submission.
-    * Verify that the user interface remains responsive during operation.
-
-**Note**: The code examples provided in the lecture materials are for your understanding. Please use them as a reference
-to develop your own solutions and avoid copying them directly.
-
-### Examples
-
-As always, these are merely examples to illustrate what is expected. You have creative freedom to design your
-applications as you see fit, as long as they meet the requirements.
